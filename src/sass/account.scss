@@ -1,0 +1,33 @@
+.account-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 720px) {
+  .account-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .account-content-wrapper.cta {
+    flex: 0;
+  }
+
+  .transaction-button {
+    width: 200px;
+  }
+}
+
+.account-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* <-- ceci corrige le désalignement vertical */
+}
+
+.account-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 💥 Cela centre verticalement le contenu */
+}

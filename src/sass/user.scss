@@ -1,0 +1,98 @@
+.user-header {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.user-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.edit-button {
+  border: none;
+  background-color: #00bc77;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+  background-color: #029e66;
+}
+
+.account {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  background-color: white;
+  width: 80%;
+  margin: 0 auto 2rem auto;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  text-align: left;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.account-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.account-amount {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.account-amount-description {
+  margin: 0;
+}
+
+.account-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.account-content-wrapper.cta {
+  flex: 0;
+}
+
+.transaction-button {
+  margin-top: 1rem;
+  padding: 8px 16px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #00bc77;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.transaction-button:hover {
+  background-color: #029e66;
+}
+
+@media (min-width: 720px) {
+  .account {
+    flex-direction: row;
+  }
+
+  .account-content-wrapper {
+    flex: 1;
+  }
+
+  .transaction-button {
+    width: 200px;
+  }
+}

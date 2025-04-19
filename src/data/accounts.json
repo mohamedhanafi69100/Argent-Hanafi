@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Argent Bank Checking (x8349)",
+    "balance": 2082.79,
+    "type": "checking",
+    "transactions": []
+  },
+  {
+    "id": 2,
+    "name": "Argent Bank Savings (x6712)",
+    "balance": 10928.42,
+    "type": "savings",
+    "transactions": []
+  },
+  {
+    "id": 3,
+    "name": "Argent Bank Credit Card (x8349)",
+    "balance": 184.3,
+    "type": "credit",
+    "transactions": []
+  }
+]

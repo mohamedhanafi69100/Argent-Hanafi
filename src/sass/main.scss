@@ -1,0 +1,15 @@
+@use "../sass/header.scss";
+@use "../sass/hero.scss";
+@use "../sass/features.scss";
+@use "../sass/footer.scss";
+@use "../sass/signIn.scss";
+
+@use "../sass/user.scss";
+
+@use "../sass/account.scss";
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}

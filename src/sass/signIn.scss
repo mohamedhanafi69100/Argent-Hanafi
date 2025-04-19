@@ -1,0 +1,106 @@
+/* Conteneur principal du formulaire Sign In */
+.sign-in-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: white;
+  width: 300px;
+  padding: 2rem;
+  /* Supprime margin-top si on centre verticalement via .bg-dark */
+  margin: 0 auto;
+}
+
+/* Icône au-dessus du titre "Sign In" */
+.sign-in-icon {
+  font-size: 5rem;
+}
+
+/* Conteneur des champs de saisie */
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.input-wrapper label {
+  font-weight: bold;
+}
+
+.input-wrapper input {
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+/* Zone "Remember me" (case à cocher + label) */
+.input-remember {
+  display: flex;
+  align-items: center;
+}
+
+.input-remember label {
+  margin-left: 0.25rem;
+}
+
+/* Bouton de connexion */
+.sign-in-button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  border: none;
+  border-color: #00bc77;
+  background-color: #00bc77;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Section "Join us" avec lien vers l'inscription */
+.register-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 1rem;
+}
+
+.sign-up-link {
+  font-weight: bold;
+  font-size: 16px;
+  color: #2c3e50;
+  text-decoration: none;
+  display: flex;
+  gap: 5px;
+}
+
+.sign-up-link:hover {
+  text-decoration: underline;
+}
+
+// .bg-dark {
+//   background-color: #12002b;
+//   flex: 1;
+//   justify-content: center;
+//   align-items: flex-start;
+//   padding-top: 4rem;
+//   width: 100%;
+//   min-height: 80vh;
+//   display: flex;
+//   flex-direction: column; /* ✅ Nouvelle ligne */
+//   align-items: center; /* ✅ Centrage horizontal */
+// }
+
+.bg-dark {
+  background-color: #12002b;
+
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 1rem; /* ou essaye même 0 si tu veux que ce soit bien collé */
+  width: 100%;
+  min-height: 80vh;
+}

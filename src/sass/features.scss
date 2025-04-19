@@ -1,0 +1,35 @@
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  min-height: 42vh;
+}
+
+@media (min-width: 920px) {
+  .features {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.feature-item {
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+  padding: 2rem;
+}
+
+.feature-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+  border: 10px solid #00bc77;
+  border-radius: 50%;
+}
+
+.feature-item-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
