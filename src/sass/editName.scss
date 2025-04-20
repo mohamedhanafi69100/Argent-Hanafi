@@ -1,0 +1,51 @@
+.user-header {
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.edit-button {
+  border-color: #00bc77;
+  background-color: #00bc77;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.user-editor-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-editor-content-wrapper {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-editor-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.user-edit-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-edit-buttons {
+  margin-top: 10px;
+}
+
+.form-button {
+  margin-right: 10px;
+}

@@ -1,16 +1,24 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../images/argentBankLogo.webp";
-import houseIcon from "../images/house.svg";
+// import houseIcon from "../images/house.svg";
 
-// import houseIcon from "../../assets/house.svg";
+import { logout } from "../redux/userSlice";
 
 const Header = () => {
   const location = useLocation();
-  const isSignInPage = location.pathname === "/";
+  const isSignInPage = location.pathname === "/sign-in";
+  const isSignIn = useSelector((state) => state.user.token);
+  const userName = useSelector((state) => state.user.userName);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const isSignIn = false; // faux login temporaire
-  const userName = "user";
+  const signOut = () => {
+    localStorage.removeItem("token");
+    dispatch(logout());
+    navigate("/");
+  };
 
   return (
     <header className="header">
@@ -21,29 +29,21 @@ const Header = () => {
             src={logo}
             alt="argentbank logo"
           />
-          <h1 className="sr-only">argentbank</h1>
+          <h1 className="sr-only">Argent Bank</h1>
         </Link>
 
         {isSignIn ? (
           <div>
             <Link to="/user" className="main-nav-item">
-              <i className="fa fa-user-circle"></i>
-              {userName}
+              <i className="fa fa-user-circle"></i> {userName}
             </Link>
-            <button className="main-nav-item">
-              <i className="fa fa-sign-out"></i>
-              Sign Out
+            <button className="main-nav-item" onClick={signOut}>
+              <i className="fa fa-sign-out"></i> Sign Out
             </button>
           </div>
-        ) : isSignInPage ? (
+        ) : isSignInPage ? null : (
           <Link to="/sign-in" className="main-nav-item">
-            <i className="fa fa-user-circle"></i>
-            Sign In
-          </Link>
-        ) : (
-          <Link to="/" className="main-nav-item house">
-            <img src={houseIcon} alt="home" />
-            Home
+            <i className="fa fa-user-circle"></i> Sign In
           </Link>
         )}
       </nav>
